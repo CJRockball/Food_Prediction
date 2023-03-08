@@ -1248,3 +1248,189 @@
 2023-03-07 22:52:53,550 INFO     Total prediction time 5.336676681041718
 2023-03-07 22:53:03,206 INFO     saving submission
 2023-03-07 22:53:03,277 INFO     submission file saved
+2023-03-08 13:36:19,161 INFO     -------------------------------------------------------------------
+2023-03-08 13:36:19,161 INFO     train_test_fcn
+2023-03-08 13:36:19,161 INFO     running model type: rf_xgb
+2023-03-08 13:36:19,161 INFO     with params: {'n_estimators': 100}
+2023-03-08 13:36:54,203 INFO     Number of features: 52
+2023-03-08 13:36:54,203 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'rank_on_cp' 'num_orders_lag_1w'
+ 'num_orders_lag_2w' 'num_orders_lag_3w' 'num_orders_lag_4w'
+ 'num_orders_lag_5w' 'num_orders_lag_6w' 'num_orders_lag_7w'
+ 'num_orders_lag_8w' 'num_orders_lag_9w' 'num_orders_lag_10w'
+ 'num_orders_lag_11w' 'num_orders_lag_12w' 'expanding_min' 'expanding_max'
+ 'expanding_mean' 'expanding_std' 'expanding_bp' 'expanding_cp'
+ 'Avg_orders_category_week' 'Avg_orders_cuisine_week'
+ 'Avg_orders_city_region_week' 'Avg_orders_centert_week' 'week'
+ 'Avg_orders_oparea_week' 'Center_total_cetegory_food_week0'
+ 'Center_total_cetegory_food_week1' 'meal_week_count' 'cuisine_week_count'
+ 'category_week_count' 'centert_week_count' 'op_area_week_count'
+ 'cityregion_week_count' 'email_week_sum' 'homepage_week_sum']
+2023-03-08 13:38:30,013 INFO     training time: 90.61s
+2023-03-08 13:38:30,014 INFO     training rmse: 0.445656
+2023-03-08 13:38:30,014 INFO     test rmse: 0.504435
+2023-03-08 13:38:30,201 INFO     Training metrics, R2 on test 0.823794373057545, rmsle on test: 9.507667177512696
+2023-03-08 13:38:30,281 INFO     feature importance: {'cuisine_Italian': 0.008587032556533813, 'category_Sandwich': 0.008603725582361221, 'cuisine_Thai': 0.009059352800250053, 'category_Biryani': 0.014266383834183216, 'meal_id_2306': 0.014607550576329231, 'dscnt_pct': 0.01674070954322815, 'category_Rice Bowl': 0.02276311069726944, 'homepage_featured': 0.03446750342845917, 'emailer_for_promotion': 0.12940317392349243, 'expanding_mean': 0.4408899247646332}
+2023-03-08 13:38:30,281 INFO     Model Test
+2023-03-08 13:38:31,979 INFO     Prediction range w: 135 to 145
+2023-03-08 13:42:46,726 INFO     -------------------------------------------------------------------
+2023-03-08 13:42:46,726 INFO     train_test_fcn
+2023-03-08 13:42:46,727 INFO     running model type: rf_xgb
+2023-03-08 13:42:46,727 INFO     with params: {'n_estimators': 100}
+2023-03-08 13:43:15,335 INFO     Number of features: 50
+2023-03-08 13:43:15,335 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'rank_on_cp' 'num_orders_lag_1w'
+ 'num_orders_lag_2w' 'num_orders_lag_3w' 'num_orders_lag_4w'
+ 'num_orders_lag_5w' 'num_orders_lag_6w' 'num_orders_lag_7w'
+ 'num_orders_lag_8w' 'num_orders_lag_9w' 'num_orders_lag_10w'
+ 'num_orders_lag_11w' 'num_orders_lag_12w' 'expanding_min' 'expanding_max'
+ 'expanding_mean' 'expanding_std' 'expanding_bp' 'expanding_cp'
+ 'Avg_orders_category_week' 'Avg_orders_cuisine_week'
+ 'Avg_orders_city_region_week' 'Avg_orders_centert_week' 'week'
+ 'Avg_orders_oparea_week' 'meal_week_count' 'cuisine_week_count'
+ 'category_week_count' 'centert_week_count' 'op_area_week_count'
+ 'cityregion_week_count' 'email_week_sum' 'homepage_week_sum']
+2023-03-08 13:44:50,735 INFO     training time: 90.3s
+2023-03-08 13:44:50,736 INFO     training rmse: 0.444477
+2023-03-08 13:44:50,736 INFO     test rmse: 0.503892
+2023-03-08 13:44:50,890 INFO     Training metrics, R2 on test 0.8243891268226549, rmsle on test: 9.520568135182684
+2023-03-08 13:44:50,952 INFO     feature importance: {'cuisine_Italian': 0.009307177737355232, 'category_Seafood': 0.009809370152652264, 'category_Biryani': 0.010701092891395092, 'category_Rice Bowl': 0.012297295033931732, 'cuisine_Thai': 0.013849266804754734, 'meal_id_2306': 0.013930256478488445, 'dscnt_pct': 0.014545655809342861, 'homepage_featured': 0.03709616884589195, 'emailer_for_promotion': 0.1190083920955658, 'expanding_mean': 0.46483922004699707}
+2023-03-08 13:44:51,061 INFO     Model Test
+2023-03-08 13:44:52,769 INFO     Prediction range w: 135 to 145
+2023-03-08 13:49:37,829 INFO     validation rmsle: 53.38419419580095
+2023-03-08 13:49:37,829 INFO     Total prediction time 4.779478935400645
+2023-03-08 13:50:07,418 INFO     -------------------------------------------------------------------
+2023-03-08 13:50:07,419 INFO     final_train
+2023-03-08 13:50:07,419 INFO     running model type: rf_xgb
+2023-03-08 13:50:07,419 INFO     with params: {'n_estimators': 45}
+2023-03-08 13:50:15,165 INFO     -------------------------------------------------------------------
+2023-03-08 13:50:15,165 INFO     final_train
+2023-03-08 13:50:15,166 INFO     running model type: rf_xgb
+2023-03-08 13:50:15,166 INFO     with params: {'n_estimators': 100}
+2023-03-08 13:50:44,752 INFO     Number of features: 50
+2023-03-08 13:50:44,752 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'rank_on_cp' 'num_orders_lag_1w'
+ 'num_orders_lag_2w' 'num_orders_lag_3w' 'num_orders_lag_4w'
+ 'num_orders_lag_5w' 'num_orders_lag_6w' 'num_orders_lag_7w'
+ 'num_orders_lag_8w' 'num_orders_lag_9w' 'num_orders_lag_10w'
+ 'num_orders_lag_11w' 'num_orders_lag_12w' 'expanding_min' 'expanding_max'
+ 'expanding_mean' 'expanding_std' 'expanding_bp' 'expanding_cp'
+ 'Avg_orders_category_week' 'Avg_orders_cuisine_week'
+ 'Avg_orders_city_region_week' 'Avg_orders_centert_week' 'week'
+ 'Avg_orders_oparea_week' 'meal_week_count' 'cuisine_week_count'
+ 'category_week_count' 'centert_week_count' 'op_area_week_count'
+ 'cityregion_week_count' 'email_week_sum' 'homepage_week_sum']
+2023-03-08 13:52:34,401 INFO     Prediction range w: 146 to 155
+2023-03-08 13:57:23,851 INFO     Total prediction time 4.861325387159983
+2023-03-08 13:57:37,793 INFO     saving submission
+2023-03-08 13:57:37,915 INFO     submission file saved
+2023-03-08 14:13:05,793 INFO     -------------------------------------------------------------------
+2023-03-08 14:13:05,793 INFO     train_test_fcn
+2023-03-08 14:13:05,794 INFO     running model type: rf_xgb
+2023-03-08 14:13:05,794 INFO     with params: {'subsample': 0.7, 'n_estimators': 150, 'max_depth': 6, 'learning_rate': 0.1, 'colsample_bytree': 0.5, 'colsample_bylevel': 0.6}
+2023-03-08 14:13:40,646 INFO     Number of features: 52
+2023-03-08 14:13:40,647 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'rank_on_cp' 'num_orders_lag_1w'
+ 'num_orders_lag_2w' 'num_orders_lag_3w' 'num_orders_lag_4w'
+ 'num_orders_lag_5w' 'num_orders_lag_6w' 'num_orders_lag_7w'
+ 'num_orders_lag_8w' 'num_orders_lag_9w' 'num_orders_lag_10w'
+ 'num_orders_lag_11w' 'num_orders_lag_12w' 'expanding_min' 'expanding_max'
+ 'expanding_mean' 'expanding_std' 'expanding_bp' 'expanding_cp'
+ 'Avg_orders_category_week' 'Avg_orders_cuisine_week'
+ 'Avg_orders_city_region_week' 'Avg_orders_centert_week' 'week'
+ 'Avg_orders_oparea_week' 'Center_total_cetegory_food_week0'
+ 'Center_total_cetegory_food_week1' 'meal_week_count' 'cuisine_week_count'
+ 'category_week_count' 'centert_week_count' 'op_area_week_count'
+ 'cityregion_week_count' 'email_week_sum' 'homepage_week_sum']
+2023-03-08 14:14:54,985 INFO     training time: 69.25s
+2023-03-08 14:14:54,985 INFO     training rmse: 0.46601
+2023-03-08 14:14:54,985 INFO     test rmse: 0.499398
+2023-03-08 14:14:55,157 INFO     Training metrics, R2 on test 0.8272958086613583, rmsle on test: 9.490116351939083
+2023-03-08 14:14:55,213 INFO     feature importance: {'category_Seafood': 0.012520870193839073, 'cuisine_Indian': 0.01706918515264988, 'cuisine_Continental': 0.023651182651519775, 'homepage_featured': 0.033151157200336456, 'Avg_orders_category_week': 0.039646707475185394, 'emailer_for_promotion': 0.040755994617938995, 'expanding_max': 0.04924396425485611, 'expanding_min': 0.08526627719402313, 'expanding_mean': 0.1333802342414856, 'category_Rice Bowl': 0.332541823387146}
+2023-03-08 14:14:55,317 INFO     Model Test
+2023-03-08 14:14:57,113 INFO     Prediction range w: 135 to 145
+2023-03-08 14:20:45,279 INFO     validation rmsle: 52.88967999592929
+2023-03-08 14:20:45,280 INFO     Total prediction time 5.832725326220195
+2023-03-08 14:21:21,218 INFO     -------------------------------------------------------------------
+2023-03-08 14:21:21,219 INFO     final_train
+2023-03-08 14:21:21,219 INFO     running model type: rf_xgb
+2023-03-08 14:21:21,219 INFO     with params: {'subsample': 0.7, 'n_estimators': 150, 'max_depth': 6, 'learning_rate': 0.1, 'colsample_bytree': 0.5, 'colsample_bylevel': 0.6}
+2023-03-08 14:21:56,421 INFO     Number of features: 52
+2023-03-08 14:21:56,421 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'rank_on_cp' 'num_orders_lag_1w'
+ 'num_orders_lag_2w' 'num_orders_lag_3w' 'num_orders_lag_4w'
+ 'num_orders_lag_5w' 'num_orders_lag_6w' 'num_orders_lag_7w'
+ 'num_orders_lag_8w' 'num_orders_lag_9w' 'num_orders_lag_10w'
+ 'num_orders_lag_11w' 'num_orders_lag_12w' 'expanding_min' 'expanding_max'
+ 'expanding_mean' 'expanding_std' 'expanding_bp' 'expanding_cp'
+ 'Avg_orders_category_week' 'Avg_orders_cuisine_week'
+ 'Avg_orders_city_region_week' 'Avg_orders_centert_week' 'week'
+ 'Avg_orders_oparea_week' 'Center_total_cetegory_food_week0'
+ 'Center_total_cetegory_food_week1' 'meal_week_count' 'cuisine_week_count'
+ 'category_week_count' 'centert_week_count' 'op_area_week_count'
+ 'cityregion_week_count' 'email_week_sum' 'homepage_week_sum']
+2023-03-08 14:23:18,735 INFO     Prediction range w: 146 to 155
+2023-03-08 14:29:13,865 INFO     Total prediction time 5.956735161940257
+2023-03-08 15:00:59,069 INFO     saving submission
+2023-03-08 15:00:59,148 INFO     submission file saved
+2023-03-08 16:17:42,874 INFO     -------------------------------------------------------------------
+2023-03-08 16:17:42,874 INFO     train_test_fcn
+2023-03-08 16:17:42,874 INFO     running model type: rf_xgb
+2023-03-08 16:17:42,874 INFO     with params: {'subsample': 0.9, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.5, 'colsample_bylevel': 0.8}
+2023-03-08 16:18:09,931 INFO     Number of features: 49
+2023-03-08 16:18:09,932 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'num_orders_lag_1w' 'num_orders_lag_2w'
+ 'num_orders_lag_3w' 'num_orders_lag_4w' 'num_orders_lag_5w'
+ 'num_orders_lag_6w' 'num_orders_lag_7w' 'num_orders_lag_8w'
+ 'num_orders_lag_9w' 'num_orders_lag_10w' 'num_orders_lag_11w'
+ 'num_orders_lag_12w' 'expanding_min' 'expanding_max' 'expanding_mean'
+ 'expanding_std' 'expanding_bp' 'expanding_cp' 'Avg_orders_category_week'
+ 'Avg_orders_cuisine_week' 'Avg_orders_city_region_week'
+ 'Avg_orders_centert_week' 'week' 'Avg_orders_oparea_week'
+ 'meal_week_count' 'cuisine_week_count' 'category_week_count'
+ 'centert_week_count' 'op_area_week_count' 'cityregion_week_count'
+ 'email_week_sum' 'homepage_week_sum']
+2023-03-08 16:19:41,488 INFO     training time: 86.67s
+2023-03-08 16:19:41,488 INFO     training rmse: 0.449753
+2023-03-08 16:19:41,488 INFO     test rmse: 0.493984
+2023-03-08 16:19:41,684 INFO     Training metrics, R2 on test 0.8312277121469499, rmsle on test: 9.400468166252905
+2023-03-08 16:19:41,757 INFO     feature importance: {'category_Sandwich': 0.010098956525325775, 'meal_week_count': 0.011854923330247402, 'dscnt_pct': 0.012551533989608288, 'base_price': 0.014528046362102032, 'homepage_featured': 0.03929785266518593, 'expanding_max': 0.04556555673480034, 'category_Rice Bowl': 0.04884033277630806, 'emailer_for_promotion': 0.06076833978295326, 'expanding_mean': 0.1322735697031021, 'expanding_min': 0.31821209192276}
+2023-03-08 16:19:41,758 INFO     Model Test
+2023-03-08 16:19:43,203 INFO     Prediction range w: 135 to 145
+2023-03-08 16:24:19,837 INFO     validation rmsle: 52.62844066624752
+2023-03-08 16:24:19,839 INFO     Total prediction time 4.634683803717295
+2023-03-08 16:24:33,231 INFO     -------------------------------------------------------------------
+2023-03-08 16:24:33,232 INFO     final_train
+2023-03-08 16:24:33,232 INFO     running model type: rf_xgb
+2023-03-08 16:24:33,232 INFO     with params: {'subsample': 0.9, 'n_estimators': 150, 'max_depth': 7, 'learning_rate': 0.1, 'colsample_bytree': 0.5, 'colsample_bylevel': 0.8}
+2023-03-08 16:25:00,688 INFO     Number of features: 49
+2023-03-08 16:25:00,689 INFO     Feature names: ['id' 'center_id' 'meal_id' 'checkout_price' 'base_price'
+ 'emailer_for_promotion' 'homepage_featured' 'num_orders' 'center_type'
+ 'op_area' 'category' 'cuisine' 'city_region' 'dscnt_pct' 'neg_dscnt'
+ 'ordered' 'food_nonfood' 'num_orders_lag_1w' 'num_orders_lag_2w'
+ 'num_orders_lag_3w' 'num_orders_lag_4w' 'num_orders_lag_5w'
+ 'num_orders_lag_6w' 'num_orders_lag_7w' 'num_orders_lag_8w'
+ 'num_orders_lag_9w' 'num_orders_lag_10w' 'num_orders_lag_11w'
+ 'num_orders_lag_12w' 'expanding_min' 'expanding_max' 'expanding_mean'
+ 'expanding_std' 'expanding_bp' 'expanding_cp' 'Avg_orders_category_week'
+ 'Avg_orders_cuisine_week' 'Avg_orders_city_region_week'
+ 'Avg_orders_centert_week' 'week' 'Avg_orders_oparea_week'
+ 'meal_week_count' 'cuisine_week_count' 'category_week_count'
+ 'centert_week_count' 'op_area_week_count' 'cityregion_week_count'
+ 'email_week_sum' 'homepage_week_sum']
+2023-03-08 16:26:43,796 INFO     Prediction range w: 146 to 155
+2023-03-08 16:31:25,552 INFO     Total prediction time 4.7280104915301004
+2023-03-08 16:31:31,797 INFO     saving submission
+2023-03-08 16:31:31,876 INFO     submission file saved

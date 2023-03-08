@@ -11,7 +11,7 @@ def feat_eng(df:pd.DataFrame, cols_dict:dict, num_of_lags:int, train_flag:bool=1
     df                  = num_lag(df, num_of_lags)
     df, cols_dict       = run_global_stats_lag(df, cols_dict)
     df, cols_dict       = run_weekly_stats(df, cols_dict)
-    df, cols_dict       = run_weekly_center_stats(df,cols_dict)
+    #df, cols_dict       = run_weekly_center_stats(df,cols_dict)
     df, cols_dict       = run_two_grp(df, cols_dict)
     df, cols_dict       = run_single_grp(df, cols_dict)
     

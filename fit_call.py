@@ -59,12 +59,12 @@ def random_opt_func(train:pd.DataFrame, lags:int, n:int=10):
     df_full, cols_dict = feat_eng(df_full, cols_dict, lags, train_flag=1)
     x_train, y_train, x_val, y_val, ohe = prep_sum(df_full, cols_dict, geo_flag=1)
                     
-    params = { 'max_depth': [4, 5, 6, 7, 8],
+    params = { 'max_depth': [3, 4, 5], #, 7, 8],
             'learning_rate': [0.001, 0.01, 0.1],
             'subsample': np.arange(0.5, 1.0, 0.1),
             'colsample_bytree': np.arange(0.4, 1.0, 0.1),
             'colsample_bylevel': np.arange(0.4, 1.0, 0.1),
-            'n_estimators': [20, 50, 100, 150, 200]}
+            'n_estimators': [100, 200, 400, 500]} #[20, 50, 100, 150, 200]}
 
     param_list = list(ParameterSampler(params, n_iter=n))
 
@@ -74,6 +74,7 @@ def random_opt_func(train:pd.DataFrame, lags:int, n:int=10):
     eval_metric = ["rmse"]
     metric_lst = []
     for i in range(0,n):
+        print('checking model nr:',i)
         xgb_reg = xgb.XGBRegressor(n_jobs=-1)
         xgb_reg.set_params(**param_list_of_dicts[i])
         xgb_rand = xgb_reg.fit(x_train, y_train , eval_metric = eval_metric,

@@ -22,6 +22,7 @@ def basic(df: pd.DataFrame, cols_dict: dict, train_flag: bool=1) -> Tuple[pd.Dat
     df['dscnt_pct']         = (df['base_price'] - df['checkout_price']) / df['base_price']
     # Bool indicator for discount
     df['neg_dscnt']         = (df['dscnt_pct'] < 0).astype(int)
+
     # Bool indicator for non zero col, this is known before hand because zero order cols are not offered that week
     df['ordered'] = 1 
     df.loc[df.id.isnull(),'ordered'] = 0
@@ -30,11 +31,13 @@ def basic(df: pd.DataFrame, cols_dict: dict, train_flag: bool=1) -> Tuple[pd.Dat
     other = ['Beverages', 'Starters', 'Sandwich', 'Extras', 'Other Snacks']
     df['food_nonfood'] = np.where(df['category'].isin(food), 1, 0)
 
+    # rank_cp = df.groupby(['week', 'center_id'])[['checkout_price']].rank().rename(columns = {'checkout_price':'rank_on_cp'})
+    # df = df.join(rank_cp)
     
     df.sort_values(['meal_id', 'center_id', 'week'], inplace=True)
     
     # Add new cols to cols_dict for processing future
-    cols_dict['num_cols'] += ['dscnt_pct']
+    cols_dict['num_cols'] += ['dscnt_pct', 'rank_on_cp']
     cols_dict['bin_cols'] += ['neg_dscnt']
     
     return df, cols_dict

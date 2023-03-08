@@ -178,16 +178,13 @@ df, cols_dict = weekly_center_stats(df_full, cols_dict, 'category', 'food_nonfoo
 
 display(df)
 
-
-
 #%%
-
 #df_test = train.copy()
 # Set up data set
 # all_center_numbers = train.center_id.unique()
 # five_random = np.random.choice(all_center_numbers, size=5)
 # df_test = train.loc[(train.center_id.isin(five_random)) & (train.week < 6),:].copy()
-df_test = train.loc[(train.center_id.isin([10, 11])) & (train.week < 3),:].copy()
+df_test = train.loc[(train.center_id == 10)) & (train.week < 2),:][['id', 'meal_id', 'checkout_price']].copy()
 
 # Create food count
 food = ['Rice Bowl', 'Pasta', 'Biryani', 'Pizza', 'Seafood', 'Salad', 'Fish', 'Soup']
@@ -204,11 +201,31 @@ display(df_test.head(20))
 #display(sum_on_cat)
 #total_week = sum_on_cat.groupby(['week', 'center_id']).food_nonfood.sum().to_frame().reset_index()
 #display(total_week)
-
-sum_on_cat = df_test.groupby(['week', 'center_id', 'category', 'cuisine'])[['checkout_price']].count().reset_index()
+df_test['checkout_price'] = df_test['checkout_price'].astype(float)
+sum_on_cat = df_test.groupby(['week', 'center_id', 'category', 'cuisine'])[['checkout_price']].rank().reset_index()
 print(sum_on_cat.shape)
 display(sum_on_cat)
 #total_week = sum_on_cat.groupby(['week', 'center_id']).food_nonfood.sum().to_frame().reset_index()
 #display(total_week)
+
+#%%
+
+df_test = train.copy()
+df_full, cols_dict = df_fresh(df_test)
+df_test, cols_dict = basic(df_full, cols_dict)
+# Set up data set
+# all_center_numbers = train.center_id.unique()
+# five_random = np.random.choice(all_center_numbers, size=5)
+# df_test = train.loc[(train.center_id.isin(five_random)) & (train.week < 6),:].copy()
+#df_test = train.loc[(train.center_id.isin([10, 11])) & (train.week < 3),:][['id', 'week', 'center_id', 'meal_id', 'checkout_price']].copy()
+#display(df_test)
+
+# sum_on_cat = df_test.groupby(['week', 'center_id'])[['checkout_price']].rank().rename(columns = {'checkout_price':'rank_cp'})
+# print(sum_on_cat.shape)
+# display(sum_on_cat)
+# df_test = df_test.join(sum_on_cat)
+display(df_test.loc[(df_test.week == 1) & (df_test.center_id == 10)])
+
+
 
 # %%
